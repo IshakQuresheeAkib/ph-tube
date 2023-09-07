@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title Icon -->
+    <link rel="shortcut icon" href="./images/justIcon.svg" type="image/x-icon">
+    <!-- daisyUi and tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body{
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <title>Blog Post</title>
+</head>
+<body class="mx-auto pt-10 md:px-16 px-6">
+  <header>
+    <nav class="flex  justify-center border-b-2 pb-5">
+        <div class="flex gap-2 items-center">
+            <img src="./images/justIcon.svg" alt="">
+            <p class="font-bold text-3xl text-[#252525]"><span class="text-[#FF1F3D]">PH </span>Blog</p>
+        </div>
+    </nav>
+    
+</header>
+    <main>
+        <section class="mx-auto py-32 md:px-6 px-3">
+          <div class=" w-full lg:h-96  flex lg:flex-row flex-col justify-start  gap-7">
+            <img src="./images/difference-between-var-let-and-const.jpg" alt="" class=" rounded-md">
+            <div class="self-center">
+              <h1 class="text-3xl font-bold pb-1 mb-4 border-b-2 border-red-300 text-center ">Discuss the scope of var, let, and const</h1>
+              <p class="first-line:font-medium first-line:text-xl selection:bg-orange-100 text-md leading-6">The scope of var, let, and const refers to where in your code a variable can be accessed or modified. Each of these keywords has different rules regarding their scope, which can impact how they behave in different parts of your code.
+
+                var Scope:
+                Variables declared with var have function scope or global scope.
+                If declared inside a function, they are only accessible within that function.
+                If declared outside any function (in the global scope), they are accessible globally.
+                They can also be accessed before they are declared (hoisting), but their value will be undefined.
+              
+                let Scope:
+                Variables declared with let have block scope.
+                They are confined to the block (curly braces) in which they are defined.
+                They are not accessible before they are declared (no hoisting).
+                They can be re-assigned
+
+                const Scope:
+                Variables declared with const also have block scope.
+                Like let, they are confined to the block in which they are defined.
+                They are not accessible before they are declared (no hoisting).
+                const variables cannot be re-assigned after their initial assignment.
+
+                In summary:
+
+                var has function or global scope, can be accessed before declaration (hoisting), and can be re-declared in the same scope.
+                let and const have block scope, cannot be accessed before declaration (no hoisting), and const cannot be re-assigned.
+                Use let when you need to re-assign the variable, and use const when the value won't change after assignment.
+                The introduction of let and const has improved JavaScript's handling of variable scope, making it more predictable and aligned with other programming languages.
+
+              </p>
+            </div>
+          </div>
+          <div class=" w-full lg:h-96 flex lg:flex-row flex-col-reverse justify-start  gap-7 my-32">
+            <div class="self-center">
+              <h1 class="text-3xl font-bold pb-1 mb-4 border-b-2 border-red-300 text-center ">Tell us the use cases of null and undefined
+              </h1>
+              <p class="first-line:font-medium first-line:text-xl selection:bg-orange-100 text-md leading-6">Both null and undefined are special values in JavaScript that represent the absence of a value. However, they are used in slightly different scenarios.
+                undefined Use Cases:
+                A variable that is declared but not assigned a value will have the value undefined.
+                Function parameters that are not provided when the function is called are undefined.
+                When an object property or array element is accessed with a non-existing key/index, the result is undefined.
+                undefined can be used to explicitly set a variable to indicate that it has no value yet.
+                undefined is often returned implicitly by functions that don't have a return statement.
+                null Use Cases:
+                null is used to explicitly represent the absence of any value or an empty value.
+                It can be assigned to variables to indicate that they intentionally have no value.
+                null is often used to reset or clear a variable's value when it's no longer needed.
+                In summary:
+                Use undefined when a value is expected but hasn't been provided, or when indicating a variable's initial state.
+                Use null when you want to explicitly indicate that a variable has no value or to reset a variable's value.
+                It's important to understand these differences to avoid confusion and to handle cases where these values might appear in your code.</p>
+            </div>
+            <img src="./images/null-and-undefined-in-javascript_thumbnail.webp" alt="" class="rounded-md">
+          </div>
+          <div class=" w-full lg:h-96  flex lg:flex-row flex-col justify-start gap-7">
+            <img src="./images/apirest_final.jpeg" alt="" class=" mt-24 rounded-md">
+            <div>
+              <h1 class="text-3xl font-bold pb-1 mb-4 border-b-2 border-red-300 text-center ">What do you mean by REST API?</h1>
+              <p class="first-line:font-medium first-line:text-xl selection:bg-orange-100 text-md leading-6">REST API, which stands for Representational State Transfer Application Programming Interface, is an architectural style and a set of constraints for designing and interacting with web services. It's a way to build and manage APIs for web applications, allowing different software systems to communicate with each other over the internet.
+                Key characteristics of a REST API include: 
+                Statelessness: Each API request from a client to the server must contain all the information necessary to understand and fulfill the request. The server doesn't store any client context between requests.                
+                Client-Server Architecture: The client and server are separate entities, each responsible for their own concerns. This separation allows for better scalability and maintenance.                
+                Uniform Interface: REST APIs use a consistent set of principles for interaction, including using HTTP methods (GET, POST, PUT, DELETE) for different operations, and using standardized URIs (Uniform Resource Identifiers) to identify resources.               
+                Layered System: REST APIs can be built in a way that allows for the inclusion of intermediary layers, such as load balancers or caches, which can improve scalability and security.                
+                Code on Demand (optional): Clients can download and execute code, typically JavaScript, from the server to extend functionality within the client application.                
+                A REST API works by allowing clients (such as web browsers, mobile apps, or other servers) to send HTTP requests to a server. These requests are usually based on specific HTTP methods, such as GET (retrieve data), POST (send data), PUT (update data), or DELETE (remove data). The server then processes the request and sends back an HTTP response containing the requested data or an acknowledgment of the action performed.
+                </p>
+            </div>
+          </div>
+        </section>
+    </main>
+</body>
+</html>
